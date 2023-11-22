@@ -21,7 +21,7 @@ pipeline {
       }
         stage('Deploy') {
             steps {
-                echo 'Deploying..'
+                git 'https://github.com/djsurani/simeple_html_css_page.git'
             }
     }
 }
