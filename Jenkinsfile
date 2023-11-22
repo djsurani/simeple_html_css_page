@@ -21,7 +21,7 @@ pipeline {
       }
         stage('Deploy') {
             steps {
-                git 'https://github.com/djsurani/simeple_html_css_page.git'
+                git branch: 'main' , url: 'https://github.com/djsurani/simeple_html_css_page.git'
             }
     }
 }
