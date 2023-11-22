@@ -15,7 +15,6 @@ pipeline {
         sh '''
             gcloud version
             gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
-            gcloud compute zones list
           '''
         }
       }
