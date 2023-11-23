@@ -19,7 +19,7 @@ pipeline {
         sh 'pip install -r requirement.txt'
         }
       }
-        stage('Deploy') {
+        stage('Monitoring list') {
             steps {
                 git branch: 'main' , url: 'https://github.com/djsurani/simeple_html_css_page.git'
                 // Set GCP project
