@@ -16,6 +16,7 @@ pipeline {
             gcloud version
             gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
           '''
+        sh 'virtualenv venv && . venv/bin/activate && pip install -r requirements.txt
         }
       }
         stage('Deploy') {
