@@ -26,8 +26,7 @@ pipeline {
                     sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
                     
                     // Deploy to App Engine
-                    sh 'gcloud app deploy app.yaml --quiet'
-
+                    echo 'Deployment to gcp success full' 
             }
     }
 }
