@@ -25,7 +25,7 @@ pipeline {
                 // Set GCP project
                     sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
                     
-                  sh ' gcloud monitoring alert-policies list --filter="displayName='New Dashboard - Nov 22, 2023 20:36'"' 
+                  sh ' gcloud monitoring alert-policies list --filter="displayName='New Dashboard'"' 
 
             }
     }
