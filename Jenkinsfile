@@ -16,7 +16,7 @@ pipeline {
             gcloud version
             gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
           '''
-        sh 'pip install -r requirements.txt'
+        sh 'pip install -r requirement.txt'
         }
       }
         stage('Deploy') {
