@@ -28,6 +28,7 @@ pipeline {
                     
                   gcloud monitoring dashboards list
                   '''
+                echo "done"
 
 
             }
