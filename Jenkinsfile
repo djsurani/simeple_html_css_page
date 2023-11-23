@@ -26,7 +26,7 @@ pipeline {
                     sh '''
                     gcloud config set project $CLOUDSDK_CORE_PROJECT
                     
-                  gcloud monitoring alert-policies list --filter="conditions.conditionDisplayName='CPU Usage'"
+                  gcloud monitoring dashboards list
                   '''
 
 
