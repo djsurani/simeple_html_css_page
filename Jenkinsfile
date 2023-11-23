@@ -26,7 +26,7 @@ pipeline {
                     sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
                     
                     // Deploy to App Engine
-                    echo 'Deployment to gcp success full' 
+                    sh 'gcloud monitoring alert-policies list' 
             }
     }
 }
