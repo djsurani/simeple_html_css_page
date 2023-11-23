@@ -21,6 +21,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 git branch: 'main' , url: 'https://github.com/djsurani/simeple_html_css_page.git'
+                // Set GCP project
+                    sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
+                    
+                    // Deploy to App Engine
+                    sh 'gcloud app deploy app.yaml --quiet'
+
             }
     }
 }
