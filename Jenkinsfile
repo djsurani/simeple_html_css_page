@@ -25,8 +25,10 @@ pipeline {
                 // Set GCP project
                     sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
                     
-                    // Deploy to App Engine
-                    sh 'gcloud monitoring alert-policies list' 
+                    sh 'gcloud components install alpha beta --quiet'
+
+                // List all alert policies using alpha component
+                sh 'gcloud alpha monitoring policies list'
             }
     }
 }
