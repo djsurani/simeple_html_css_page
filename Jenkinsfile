@@ -23,9 +23,12 @@ pipeline {
             steps {
                 git branch: 'main' , url: 'https://github.com/djsurani/simeple_html_css_page.git'
                 // Set GCP project
-                    sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
+                    sh '''
+                    gcloud config set project $CLOUDSDK_CORE_PROJECT
                     
-                  sh ' gcloud monitoring alert-policies list --filter="displayName='New Dashboard'"' 
+                  gcloud monitoring alert-policies list --filter="conditions.conditionDisplayName='CPU Usage'"
+                  '''
+
 
             }
     }
