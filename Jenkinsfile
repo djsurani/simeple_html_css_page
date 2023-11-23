@@ -25,10 +25,8 @@ pipeline {
                 // Set GCP project
                     sh 'gcloud config set project $CLOUDSDK_CORE_PROJECT'
                     
-                    sh 'gcloud components install alpha beta --quiet'
+                  sh ' gcloud monitoring alert-policies list --filter="displayName='New Dashboard - Nov 22, 2023 20:36'"' 
 
-                // List all alert policies using alpha component
-                sh 'gcloud alpha monitoring policies list'
             }
     }
 }
